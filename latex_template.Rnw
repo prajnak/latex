@@ -138,10 +138,11 @@
 
 	\pagestyle{fancy}
 	\pagenumbering{arabic}
+% Main article starts here
 \chapter{Does Automation Make Us Dumb?} % (fold)
 \label{sec:section_name}
     In this article, we explore the long term effects of a general shift in knowledge 
-    consumption methods from reading to jumping between multiple snippets.
+    consumption methods from reading to jumping between multiple sources very frequently.
 
 % section section_name (end)
 \end{document}
