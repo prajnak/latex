@@ -1,0 +1,149 @@
+\documentclass[10pt,oneside,final]{report}
+\usepackage[top=1in, bottom=1in, left=1.5in, right=1.5in]{geometry}
+
+\usepackage[pagestyles]{titlesec}
+\usepackage[margin=10pt,font=small,labelfont=bf, labelsep=endash, justification=centering]{caption}
+\usepackage{fancyhdr}
+
+\newcommand{\vsp}{\hspace{8pt}}
+\newcommand{\vq}{$'$}
+\newcommand*\ruleline[1]{\par\noindent\raisebox{.8ex}{\makebox[\linewidth]{\hrulefill\hspace{1ex}\raisebox{-.8ex}{#1}\hspace{1ex}\hrulefill}}}
+
+\titleformat{\chapter}[hang]{\LARGE \sc \filcenter}{\thechapter\vsp}{7pt}{\LARGE \sc}
+\titlespacing*{\chapter}{10pt}{0pt}{20pt}
+
+\titleformat{\section}[hang]{\Large \sc \filcenter}{\thesection\vsp}{7pt}{\Large \sc}
+\titlespacing*{\section}{0pt}{0pt}{0pt}
+
+\titleformat{\subsection}[hang]{\large \sc \bfseries \filcenter}{\thesubsection\vsp}{7pt}{\bfseries \large \sc}
+\titlespacing*{\subsection}{0pt}{0pt}{0pt}
+
+\titleformat{\subsubsection}[hang]{\normalsize \bfseries \sc \filcenter}{}{0pt}{\bfseries \sc}
+\titlespacing*{\subsubsection}{0pt}{0pt}{0pt}
+
+\titleformat{\paragraph}[hang]{\normalsize \sc \filcenter}{}{0pt}{\sc}
+\titlespacing*{\paragraph}{0pt}{0pt}{0pt}
+
+\titleformat{\subparagraph}[hang]{\small \sc \filcenter}{}{0pt}{\sc}
+\titlespacing*{\subparagraph}{0pt}{0pt}{0pt}
+
+% \newcommand{\vsp}{\hspace{8pt}}
+% \titleformat{\section}[hang]{\Large \sc \filcenter}{\thesection\vsp}{7pt}{\Large \sc}
+% \titlespacing*{\section}{0pt}{0pt}{0pt}
+% \titleformat{\paragraph}[hang]{\normalsize \sc \filcenter}{}{0pt}{\sc}
+% \titlespacing*{\paragraph}{0pt}{0pt}{0pt}
+\usepackage{amsmath,amssymb,amstext}
+\usepackage[pdftex,pagebackref=false]{hyperref} % with basic options
+		% N.B. pagebackref=true provides links back from the References to the body text. This can cause trouble for printing.
+\hypersetup{
+    plainpages=false,       % needed if Roman numbers in frontpages
+    pdfpagelabels=true,     % adds page number as label in Acrobat's page count
+    bookmarks=true,         % show bookmarks bar?
+    unicode=false,          % non-Latin characters in Acrobat’s bookmarks
+    pdftoolbar=true,        % show Acrobat’s toolbar?
+    pdfmenubar=true,        % show Acrobat’s menu?
+    pdffitwindow=false,     % window fit to page when opened
+    pdfstartview={FitH},    % fits the width of the page to the window
+    pdftitle={},    % title: CHANGE THIS TEXT!
+    pdfauthor={Prajna Kandarpa},    % author: CHANGE THIS TEXT! and uncomment this line
+    pdfsubject={Video Processing},  % subject: CHANGE THIS TEXT! and uncomment this line
+    pdfkeywords={keyword1} {key2} {key3}, % list of keywords, and uncomment this line if desired
+    pdfnewwindow=true,      % links in new window
+    colorlinks=true,        % false: boxed links; true: colored links
+    linkcolor=blue,         % color of internal links
+    citecolor=magenta,        % color of links to bibliography
+    filecolor=magenta,      % color of file links
+    urlcolor=cyan           % color of external links
+}
+% \hypersetup{	% override some previously defined hyperref options
+% %    colorlinks,%
+%     citecolor=black,%
+%     filecolor=black,%
+%     linkcolor=black,%
+%     urlcolor=black}
+% \usepackage[pdftex,letterpaper=true,pagebackref=false]{hyperref}
+% \linespread{value}
+% where value determine line spacing. This value is somewhat confusing, because:
+% Value	Line spacing
+% 1.0	single spacing
+% 1.3	one-and-a-half spacing
+% 1.6	double spacing
+\linespread{1.3}
+\begin{document}
+	\pagestyle{empty}
+	\pagenumbering{roman}
+
+	% The contents of the title page are specified in the "titlepage"
+	% environment.
+	\begin{titlepage}
+	        \begin{center}
+	        % \vspace*{1.0cm}
+
+	        \Large
+	        {\bf \sc \underline{University Of Waterloo}}
+	        
+	        \normalsize
+	        {\bf \sc Faculty Of Engineering \\
+	        Mechanical And Mechatronics Engineering} \\
+
+	        \vspace*{1.0cm}
+	        \Large
+	        {\bf \uppercase{Title of paper}}
+	        
+	        \vspace*{1.5cm}
+	        % \normalsize
+	        % \begin{figure}[h!]
+	        % \centering
+	        % \includegraphics[width=\textwidth]{title}
+	        % \label{fig:tit}
+	        % \end{figure}
+	        
+	        % \vfill
+	        % {\sc Self Study Report}
+
+	        \vspace*{1cm}
+	        Prepared by\\
+	        {\sc Prajna Kandarpa $\vert$ 20402024 \\
+	        Author 2 $\vert$ 23447677 \\
+	        Author 3 $\vert$ 22335577 }
+
+	        \end{center}
+	\end{titlepage}
+	\linespread{1.0}
+    \pagestyle{plain}
+    \setcounter{page}{2}
+    % TABLE OF CONTENTS
+    \renewcommand\contentsname{Table of Contents}
+    \tableofcontents
+    \cleardoublepage
+    \phantomsection
+    %\newpage
+    
+    % L I S T   O F   T A B L E S
+    % ---------------------------
+    \addcontentsline{toc}{chapter}{List of Tables}
+    \listoftables
+    \cleardoublepage
+    \phantomsection		% allows hyperref to link to the correct page
+    \newpage
+    
+    % L I S T   O F   F I G U R E S
+    % -----------------------------
+    \addcontentsline{toc}{chapter}{List of Figures}
+    \listoffigures
+    \cleardoublepage
+    \phantomsection		% allows hyperref to link to the correct page
+
+
+
+	\pagestyle{fancy}
+	\pagenumbering{arabic}
+\chapter{Does Automation Make Us Dumb?} % (fold)
+\label{sec:section_name}
+    In this article, we explore the long term effects of a general shift in knowledge 
+    consumption methods from reading to jumping between multiple snippets.
+
+% section section_name (end)
+\end{document}
+
+
